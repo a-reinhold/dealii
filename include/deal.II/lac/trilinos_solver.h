@@ -20,6 +20,7 @@
 #  include <deal.II/lac/solver_cg.h>
 #  include <deal.II/lac/solver_gmres.h>
 #  include <deal.II/lac/trilinos_tpetra_solver_direct.h>
+#  include <deal.II/lac/trilinos_tpetra_solver_wrappers.h>
 #  include <deal.II/lac/trilinos_tpetra_to_trilinos_wrappers.h>
 #endif
 

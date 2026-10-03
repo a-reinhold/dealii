@@ -17,6 +17,7 @@
 #include <deal.II/base/config.h>
 
 #ifndef DEAL_II_TRILINOS_WITH_EPETRA
+#  include <deal.II/lac/trilinos_tpetra_solver_wrappers.h>
 #  include <deal.II/lac/trilinos_tpetra_to_trilinos_wrappers.h>
 #  include <deal.II/lac/trilinos_tpetra_vector.h>
 

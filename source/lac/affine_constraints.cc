@@ -144,6 +144,26 @@ INSTANTIATE_DLTG_MATRIX(TrilinosWrappers::SparseMatrix);
 INSTANTIATE_DLTG_MATRIX(TrilinosWrappers::BlockSparseMatrix);
 #  endif
 
+#  if defined(DEAL_II_TRILINOS_WITH_TPETRA)
+template void
+AffineConstraints<double>::distribute_local_to_global<
+  LinearAlgebra::TpetraWrappers::SparseMatrix<double, MemorySpace::Default>>(
+  const FullMatrix<double> &,
+  const std::vector<AffineConstraints<double>::size_type> &,
+  const std::vector<AffineConstraints<double>::size_type> &,
+  LinearAlgebra::TpetraWrappers::SparseMatrix<double, MemorySpace::Default> &)
+  const;
+
+template void
+AffineConstraints<float>::distribute_local_to_global<
+  LinearAlgebra::TpetraWrappers::SparseMatrix<float, MemorySpace::Default>>(
+  const FullMatrix<float> &,
+  const std::vector<AffineConstraints<float>::size_type> &,
+  const std::vector<AffineConstraints<float>::size_type> &,
+  LinearAlgebra::TpetraWrappers::SparseMatrix<float, MemorySpace::Default> &)
+  const;
+#  endif
+
 #  ifndef DOXYGEN
 #    if defined(DEAL_II_TRILINOS_WITH_TPETRA) && \
       defined(DEAL_II_TRILINOS_WITH_TPETRA_INST_FLOAT)

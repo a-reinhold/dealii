@@ -35,6 +35,7 @@
 #  include <deal.II/lac/trilinos_block_sparse_matrix.h>
 #  include <deal.II/lac/trilinos_precondition.h>
 #  include <deal.II/lac/trilinos_solver.h>
+#  include <deal.II/lac/trilinos_tpetra_solver_wrappers.h>
 #  include <deal.II/lac/trilinos_sparse_matrix.h>
 #endif
 
